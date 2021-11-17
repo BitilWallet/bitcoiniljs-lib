@@ -8,6 +8,9 @@ import * as bcrypto from './crypto';
 import { fastMerkleRoot } from './merkle';
 import { Transaction } from './transaction';
 import * as types from './types';
+
+const multiHashing = require('multi-hashing');
+
 const { typeforce } = types;
 
 const errorMerkleNoTxes = new TypeError(
@@ -149,7 +152,8 @@ export class Block {
   }
 
   getHash(): Buffer {
-    return bcrypto.hash256(this.toBuffer(true));
+    if (this.version == 1) return bcrypto.hash256(this.toBuffer(true));
+    return multiHashing['x17'](this.toBuffer(true));
   }
 
   getId(): string {

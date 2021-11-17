@@ -304,8 +304,8 @@ Several other cumbersome modules have been removed,  with their new independent 
 Backward incompatible changes:
 
 __added__
-- export `address`, for `address` based [utility functions](https://github.com/bitcoinjs/bitcoinjs-lib/blob/master/src/address.js), most compatible, just without `Address` instantiation, see #401, #444
-- export `script`, for `script` based [utility functions](https://github.com/bitcoinjs/bitcoinjs-lib/blob/master/src/script.js), mostly compatible, just without `Script` instantiation, see #438, #444
+- export `address`, for `address` based [utility functions](https://github.com/BitilWallet/bitcoiniljs-lib/blob/master/src/address.js), most compatible, just without `Address` instantiation, see #401, #444
+- export `script`, for `script` based [utility functions](https://github.com/BitilWallet/bitcoiniljs-lib/blob/master/src/script.js), mostly compatible, just without `Script` instantiation, see #438, #444
 - export `ECPair`, a merged replacement for `ECKey`/`ECPubKey`, invalid types will throw via `typeforce`
 
 __changed__
