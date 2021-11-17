@@ -6,6 +6,7 @@ import * as types from './types';
 const fastMerkleRoot = require('merkle-lib/fastRoot');
 const typeforce = require('typeforce');
 const varuint = require('varuint-bitcoin');
+const multiHashing = require('multi-hashing');
 
 const errorMerkleNoTxes = new TypeError(
   'Cannot compute merkle root for zero transactions',
@@ -146,7 +147,8 @@ export class Block {
   }
 
   getHash(): Buffer {
-    return bcrypto.hash256(this.toBuffer(true));
+    if (this.version == 1) return bcrypto.hash256(this.toBuffer(true));
+    return multiHashing['x17'](this.toBuffer(true));
   }
 
   getId(): string {

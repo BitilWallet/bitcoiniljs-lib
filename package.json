@@ -1,18 +1,18 @@
 {
-  "name": "bitcoinjs-lib",
+  "name": "bitcoiniljs-lib",
   "version": "5.2.0",
-  "description": "Client-side Bitcoin JavaScript library",
+  "description": "Client-side BitcoinIL JavaScript library",
   "main": "./src/index.js",
   "types": "./types/index.d.ts",
   "engines": {
     "node": ">=8.0.0"
   },
   "keywords": [
-    "bitcoinjs",
-    "bitcoin",
+    "bitcoiniljs",
+    "bitcoinil",
     "browserify",
     "javascript",
-    "bitcoinjs"
+    "bitcoiniljs"
   ],
   "scripts": {
     "build": "npm run clean && tsc -p ./tsconfig.json && npm run formatjs",
@@ -42,7 +42,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitcoinjs/bitcoinjs-lib.git"
+    "url": "https://github.com/BitilWallet/bitcoiniljs-lib.git"
   },
   "files": [
     "src",
@@ -63,7 +63,8 @@
     "tiny-secp256k1": "^1.1.1",
     "typeforce": "^1.11.3",
     "varuint-bitcoin": "^1.0.4",
-    "wif": "^2.0.1"
+    "wif": "^2.0.1",
+    "multi-hashing": "git://github.com/BitilWallet/x17-multi-hashing.git"
   },
   "devDependencies": {
     "@types/bs58": "^4.0.0",

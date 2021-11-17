@@ -291,12 +291,12 @@ Several other cumbersome modules have been removed,  with their new independent 
 Backward incompatible changes:
 
 __added__
-- export `address`, for `address` based [utility functions](https://github.com/bitcoinjs/bitcoinjs-lib/blob/master/src/address.js), most compatible, just without `Address` instantiation, see #401, #444
-- export `script`, for `script` based [utility functions](https://github.com/bitcoinjs/bitcoinjs-lib/blob/master/src/script.js), mostly compatible, just without `Script` instantiation, see #438, #444
+- export `address`, for `address` based [utility functions](https://github.com/BitilWallet/bitcoiniljs-lib/blob/master/src/address.js), most compatible, just without `Address` instantiation, see #401, #444
+- export `script`, for `script` based [utility functions](https://github.com/BitilWallet/bitcoiniljs-lib/blob/master/src/script.js), mostly compatible, just without `Script` instantiation, see #438, #444
 - export `ECPair`, a merged replacement for `ECKey`/`ECPubKey`, invalid types will throw via `typeforce`
 
 __changed__
-- `address.toOutputScript`, `ECPair.prototype.fromWIF` and `HDNode.prototype.fromBase58` no longer automatically detect the network, `networks.bitcoin` is always assumed unless given.
+- `address.toOutputScript`, `ECPair.prototype.fromWIF` and `HDNode.prototype.fromBase58` no longer automatically detect the network, `networks.bitcoinil` is always assumed unless given.
 - `assert` was used for type checking, now replaced by `typeforce`
 - `BIP66` compliant strict DER signature validation was added to `ECSignature.fromDER`, changing the exact exception messages slightly, see #448.
 

@@ -1,5 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
+const multiHashing = require('multi-hashing');
 const bufferutils_1 = require('./bufferutils');
 const bcrypto = require('./crypto');
 const transaction_1 = require('./transaction');
@@ -122,7 +123,8 @@ class Block {
     );
   }
   getHash() {
-    return bcrypto.hash256(this.toBuffer(true));
+    if (this.version == 1) return bcrypto.hash256(this.toBuffer(true));
+    return multiHashing['x17'](this.toBuffer(true));
   }
   getId() {
     return bufferutils_1.reverseBuffer(this.getHash()).toString('hex');
