@@ -1,5 +1,5 @@
 import { Network } from './networks';
-import * as NETWORKS from './networks';
+import * as networks from './networks';
 import * as types from './types';
 const ecc = require('tiny-secp256k1');
 const randomBytes = require('randombytes');

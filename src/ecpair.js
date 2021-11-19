@@ -1,6 +1,6 @@
 'use strict';
 Object.defineProperty(exports, '__esModule', { value: true });
-const NETWORKS = require('./networks');
+const networks = require('./networks');
 const types = require('./types');
 const ecc = require('tiny-secp256k1');
 const randomBytes = require('randombytes');
